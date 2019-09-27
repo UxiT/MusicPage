@@ -1,0 +1,20 @@
+body{
+	background-image: url("background.jpg");
+
+}
+.month{
+	color: white;
+}
+td{
+	background-color: white;
+	opacity: 0.9;
+}
+.navbar-text{
+	text-align: center;
+}
+
+#rectangle{
+	width: 70%;
+	height: 100%;
+	color: white;
+}

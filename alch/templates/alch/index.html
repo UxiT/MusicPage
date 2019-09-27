@@ -1,0 +1,93 @@
+
+{% extends 'alch/base.html' %}
+
+
+{% block content %}
+
+<nav class="navbar sticky-top navbar-dark bg-dark">
+  <span class="navbar-text">{{ day }}</span>
+</nav>
+<div id="rectangle"><h1>F</h1></div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="container">
+            <div class="table-calendar">
+                <table class="table table-hover table-bordered text-center">
+                    <caption>{{month}}</caption>
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Пн</th>
+                        <th>Вт</th>
+                        <th>Ср</th>
+                        <th>Чт</th>
+                        <th>Пт</th>
+                        <th>Сб</th>
+                        <th>Вс</th>
+
+                        {% for line in lines %}
+                    <tr>
+                        {% for day in line %}
+                        <td><a href="#">{{day}}</a></td>
+                        {%endfor%}
+                    </tr>
+                    {% endfor %}
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <span class="some-span-text">
+        Some text
+    </span>
+</div>
+
+
+
+<!-- <div class="container text-center">
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <a href="alcohol/">
+                <button type="button" class="btn btn-secondary">1</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">2</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">3</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">4</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">6</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">7</button>
+            </a>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <a>
+                <button type="button" class="btn btn-secondary">1</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">2</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">3</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">4</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">6</button>
+            </a>
+            <a>
+                <button type="button" class="btn btn-secondary">7</button>
+            </a>
+        </div>
+    </div>
+</div> -->
+{% endblock %}
+

@@ -19,37 +19,35 @@
    <img class="cover-img" src="{{cover.url}}">
    <div class="box-main">
     <div id="songs">
-    {% for song in songs %}
-    <div class="stroke">
-     <div class="play-button">
-      <button align="center" onclick="Song('http://127.0.0.1:8000/media/audio/'+'{{ song.slug }}'+'.mp3')">
-       <i class="fas fa-play play" id="{{ song.slug }}"></i>
-      </button>
-      </div>
-      <audio src={{song.url}} type = "audio/mpeg"> 
-      <p id="p{{ song.slug }}"> {{ song.title }} </p>
-     </audio>
-    </div>
-
-    {% endfor %}
-    </div>
-    <div id="timebar">
-     <div id="fill">
-      <div id="timer">
-       <p>00:00</p>
-      </div>
+      {% for song in songs %}
+      <div class="stroke">
+       <div class="play-button">
+        <button align="center" onclick="Play('http://127.0.0.1:8000/media/audio/'+'{{ song.slug }}'+'.mp3')">
+         <i class="fas fa-play play" id="{{ song.slug }}"></i>
+       </button>
      </div>
-    </div>
+     <p id="p{{ song.slug }}"> {{ song.title }} </p>
    </div>
-   <div id="volume">
-    <input type="range" min="0" max="100" class="slider" value="50" id="volRange">
+
+   {% endfor %}
+ </div>
+ <div id="timebar">
+   <div id="fill">
+    <div id="timer">
+     <p>00:00</p>
    </div>
-  </div>
  </div>
- <div class="lyrics">
-   <p>
-   </p>>
- </div>
+</div>
+</div>
+<div id="volume">
+  <input type="range" min="0" max="100" class="slider" value="50" id="volRange">
+</div>
+</div>
+</div>
+<div class="lyrics">
+ <p>
+ </p>>
+</div>
 </div>
 <footer>
 

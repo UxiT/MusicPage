@@ -24,6 +24,12 @@ function Song(songId){
 	song.volume = volumeChange(slider);	
 }
 
+
+function Play(songId){
+	song.oncanplay = Song(songId);
+}
+
+
 function togglePlay(id, PId)
 {
 	if(song.paused){
